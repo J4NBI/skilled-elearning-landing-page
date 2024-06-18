@@ -1,0 +1,314 @@
+/* ###### RESET ###### */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ###### Layout ###### */
+
+body {
+  font-family: "Plus Jakarta Sans", arial;
+  background-color: hsl(0, 0%, 97%);
+}
+
+:root {
+  --one-purpel: #d5d6e0;
+  --two-dark-blue: #13183F;
+  --three-gray:#83869A;
+  --four-red: #F74780;
+  --five-pink: #FFA7C3;
+
+  /* --- 
+    Gradients 
+    --- */
+
+  --gradient-a:#F02AA6;
+  --gradient-b:#FF6F48;
+  --gradient-c:#F02AA6;
+  --gradient-d:#4851FF;
+
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* ###### NAV ###### */
+
+header {
+  margin-top: 30px;
+}
+nav {
+  padding-top: 40px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+nav img {
+  width: 40%;
+  max-width:200px;
+}
+
+.div-nav-img {
+  width: 50%;
+  max-width: 50%;
+}
+
+
+/* ###### BUTTON ###### */
+
+.btn {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.4;
+}
+
+/* ###### BUTTON NAV ###### */
+ .btn-nav {
+  background-color: var(--two-dark-blue);
+ }
+
+ /* ###### HERO ###### */
+
+ .hero-left {
+  margin: 0 auto;
+  width: 100%;
+  
+ }
+
+ /* --- 
+    Hero Button
+    --- */
+
+  .btn-hero {
+    background: linear-gradient(0deg, var(--gradient-a) 0%, var(--gradient-b) 100%);
+  }
+
+/* --- 
+  Hero TEXT
+  --- */
+
+  .hero-left h1 {
+    padding-top: 40px;
+    font-size: 2.8rem;
+  }
+
+  .hero-left p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    opacity: 0.7;
+  }
+
+  /* ###### HERO IMAGE ###### */
+
+  .img-hero-tablet {
+    display: none;
+  }
+
+  .img-hero-desktop {
+    display: none;
+  }
+
+
+
+  /* ###### MAIN BOXES ###### */
+
+  /* --- 
+   BOX ICONS
+  --- */
+
+  .boxes div {
+    position: relative;
+  }
+  .boxes img{
+    position: absolute;
+    top: -30px;
+    left: 35px;
+    z-index: 4;
+
+  }
+
+
+  /* --- 
+   BOXES 
+  --- */
+  
+
+  .boxes {
+    display: grid;
+    gap: 50px;
+  }
+
+  .boxes a {
+    text-decoration: none;
+    color: var(--four-red);
+    font-weight: 600;
+  }
+
+  .boxes a:hover {
+    opacity: 0.7;
+  }
+
+  .boxes div {
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    
+  }
+
+  .boxes div:nth-child(n+2) {
+    padding: 25px 20px;
+    background-color: white;
+    line-height: 1.5;
+  }
+
+  .box-1 {
+    background: linear-gradient(0deg, var(--gradient-a), var(--gradient-b) 100%);
+    color: white;
+    font-size: 1.2rem;
+    padding: 30px 20px;
+    
+  }
+
+
+  /* ###### FOOTER ###### */
+
+  footer {
+    padding-bottom: 30px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    height:150px;
+    background-color: #13183F;
+  }
+
+  .btn-footer {
+    background: linear-gradient(0deg, var(--gradient-c) 0%, var(--gradient-d) 100%);
+  }
+
+
+  /* ###### MEDIA QUIRIES 768 ###### */
+
+  @media only screen and (min-width:768px) {
+  
+    /* --- 
+   HERO 
+  --- */
+
+    .img-hero-mobile {
+      display: none;
+    }
+    .img-hero-tablet {
+      position: absolute;
+      top:-10%;
+      left:60%;
+      display: block;
+      width: 500px;
+      z-index: -5;
+
+    }
+
+    header {
+      padding-bottom: 250px;
+      position: relative;
+      overflow: visible;
+      
+    }
+    .hero-body {
+      margin: 0px;
+      width: 60%;
+      max-width: 800px;
+    }
+
+  /* --- 
+   BOXES 
+  --- */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+  }
+ /* ###### MEDIA QUIRIES 900 ###### */
+
+
+  @media only screen and (min-width:900px) {
+    .img-hero-tablet {
+      top:0%;
+      left:60%;
+    }
+
+  }
+
+  /* ###### MEDIA QUIRIES 1440 ###### */
+
+  @media only screen and (min-width:1440px) {
+    html {
+      font-size: 20px;
+    }
+
+    .container {
+      width: 80%;
+    }
+
+    header {
+      padding-bottom: 300px;
+      position: relative;
+      overflow: visible;
+      
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .img-hero-tablet {
+      position: absolute;
+      top:-10%;
+      left:60%;
+      display: none;
+      width: 500px;
+      z-index: -5;
+
+    }
+    .img-hero-desktop {
+      display: block;
+      position: absolute;
+      top:-30%;
+      left:50%;
+      width: 1000px;
+      z-index: -5;
+    }
+    
+    .hero-body {
+      margin: 0px;
+      width: 40%;
+      max-width: 800px;
+    }
+  }
+  
+
+
+
